@@ -13,9 +13,13 @@ To compile the lib, input:
 
     $ make
 
-To remove the object and lib files:
+To remove the object files only:
 
     $ make clean
+
+To remove the object and lib files:
+
+    $ make fclean
 
 To recompile everything:
 
