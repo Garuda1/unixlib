@@ -1,5 +1,5 @@
 /*
- * puts.c
+ * my_puts.c
  *
  * Licensed under GNU GPL v3
  * Contributors:
@@ -13,13 +13,18 @@
  */
 
 #include <unixlib.h>
+#include <sys/types.h>
 
-int puts(const char *str)
+ssize_t puts(const char *str)
 {
-  int count;
+  ssize_t count;
 
   count = 0;
   while (*(str + count))
-    count += putc(*(str + count));
+  {
+    if (my_putc(*(str + count)) == FAILURE)
+      return (FAILURE);
+    ++count;
+  }
   return (count);
 }

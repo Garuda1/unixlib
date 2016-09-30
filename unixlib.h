@@ -15,9 +15,16 @@
 #define STDERR_FD 2
 
 #define SUCCESS 0
-#define FAILURE 1
+#define FAILURE -1
 
-int putc(const char c);
-int puts(const char *str);
+#define CHAR_NULL     '\0'
+#define CHAR_NEWLINE  '\n'
+
+#include  <sys/types.h>
+
+ssize_t my_putc(const char c);
+ssize_t my_puts(const char *str);
+
+ssize_t my_strlen(const char *str);
 
 #endif

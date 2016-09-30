@@ -25,8 +25,9 @@ CFLAGS += -Wall \
 SRC_DIR = source
 
 # Actual source files
-SRCS = $(SRC_DIR)/putc.c \
-			 $(SRC_DIR)/puts.c
+SRCS = $(SRC_DIR)/my_putc.c \
+			 $(SRC_DIR)/my_puts.c \
+			 $(SRC_DIR)/my_strlen.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
