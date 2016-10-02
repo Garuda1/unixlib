@@ -1,9 +1,9 @@
 # unixlib
-UNIX C standard library replacement created for Hacktoberfest
+C standard library replacement for UNIX systems created for Hacktoberfest 2016.
 
-This library consists of replacement for simple everyday C standard functions. It mainly focuses on getting rid of the error-checking/cross platform features to reduce the functions to small pieces of understandable code which easily fit in one source file.
+This library consists of replacements for simple C standard functions, important data structures, and everyday algorithms. It mainly focuses on getting rid of the error-checking/cross platform features to reduce the functions to small pieces of understandable code which easily fit in one source file.
 
-While most of the functions look like exact copies in how they work of the standard functions, they are not and the programming mindset in this project is to simply provide a lightweight library which does what you want it to. No abstraction.
+The mindset in this project is to get rid of abstraction, focusing on what something is intended to do. As such, any form of object-oriented programming is prohibited. Keep it simple.
 
 # Compilation
 
@@ -25,8 +25,8 @@ To recompile everything:
 
     $ make re
 
-The compiled lib will be accessible as `unixlib.a`. This can be changed in the Makefile. Its header, unixlib.h, is available in the root directory.
+The compiled lib will be accessible as `unixlib.a`. This can be changed in the Makefile. Its header, unixlib.h, is available in the root directory. Just link your object files to `unixlib.a` and include `unixlib.h` in your source files/headers.
 
 # Documentation
 
-Every function from the library is defined in `unixlib.h`. Further informations about the function are available in its corresponding source file (e.g. `atoi` in `source/atoi.c`).
+Every function, structure, or global variable from the library is defined in `unixlib.h`. Documentation regarding a specific feature can be found in the corresponding source file.
