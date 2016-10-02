@@ -15,7 +15,7 @@
 
 #include  <unixlib.h>
 
-int my_isdigit(int c)
+int my_isdigit(const int c)
 {
   return (unsigned)c-'0' < 10;
 }
