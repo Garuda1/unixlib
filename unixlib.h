@@ -29,6 +29,8 @@ int my_isupper(const int c);
 ssize_t my_putc(const char c);
 ssize_t my_puts(const char *str);
 
+char my_getc(void);
+
 ssize_t my_errc(const char c);
 ssize_t my_errs(const char *str);
 
