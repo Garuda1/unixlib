@@ -3,7 +3,7 @@
 ##
 ## Licensed under GNU GPL v3
 ## Contributors:
-## - Garuda1
+## - Garuda1 <garuda1@protonmail.com>
 ##
 
 # Be careful with that one

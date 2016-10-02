@@ -25,4 +25,6 @@
    
 - Forget about coding style, it's Hacktoberfest after all, it's a community project and diversity is welcome.
 
+- Don't forget however to edit `Makefile` to add your source file to it!
+
 Happy hacktoberfest :)

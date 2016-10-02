@@ -1,6 +1,7 @@
 /*
- * my_errc.c
+ * my_atoi.c
  *
+ * Licensed under GNU GPL v3
  * Contributors:
  * - varshit97
  *
