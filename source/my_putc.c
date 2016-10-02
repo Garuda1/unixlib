@@ -16,7 +16,7 @@
 #include  <unixlib.h>
 #include  <sys/types.h>
 
-ssize_t putc(const char c)
+ssize_t my_putc(const char c)
 {
   return ((write(STDOUT_FD, &c, sizeof(char)) != -1) ? FAILURE : SUCCESS);
 }

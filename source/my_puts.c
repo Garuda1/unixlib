@@ -15,7 +15,7 @@
 #include <unixlib.h>
 #include <sys/types.h>
 
-ssize_t puts(const char *str)
+ssize_t my_puts(const char *str)
 {
   ssize_t count;
 

@@ -25,6 +25,9 @@
 ssize_t my_putc(const char c);
 ssize_t my_puts(const char *str);
 
+ssize_t my_errc(const char c);
+ssize_t my_errs(const char *str);
+
 ssize_t my_strlen(const char *str);
 
 #endif
