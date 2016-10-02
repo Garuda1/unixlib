@@ -14,14 +14,14 @@
   
   The "File header" is:
   
-  /*
-   * filename.c
-   *
-   * Licensed under GNU GPL v3
-   * Contributors:
-     - Your github username, real name, email, whatever your want actually
-   *
-   */
+      /*
+       * filename.c
+       *
+       * Licensed under GNU GPL v3
+       * Contributors:
+         - Your github username, real name, email, whatever your want actually
+       *
+       */
    
 - Forget about coding style, it's Hacktoberfest after all, it's a community project and diversity is welcome.
 
