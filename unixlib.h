@@ -33,6 +33,7 @@
 int my_isdigit(const int c);
 int my_islower(const int c);
 int my_isupper(const int c);
+int my_isspace(const int c);
 
 ssize_t my_putc(const char c);
 ssize_t my_puts(const char *str);
