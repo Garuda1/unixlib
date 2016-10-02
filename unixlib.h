@@ -17,6 +17,14 @@
 #define SUCCESS 0
 #define FAILURE -1
 
+#define COLOUR_RED     "\x1b[0;31m"
+#define COLOUR_GREEN   "\x1b[0;32m"
+#define COLOUR_YELLOW  "\x1b[0;33m"
+#define COLOUR_BLUE    "\x1b[0;34m"
+#define COLOUR_MAGENTA "\x1b[0;35m"
+#define COLOUR_CYAN    "\x1b[0;36m"
+#define COLOUR_RESET   "\x1b[0m"
+
 #define CHAR_NULL     '\0'
 #define CHAR_NEWLINE  '\n'
 
@@ -33,6 +41,9 @@ char my_getc(void);
 
 ssize_t my_errc(const char c);
 ssize_t my_errs(const char *str);
+
+ssize_t my_fdputc(const int fd, const char c);
+ssize_t my_fdputs(const int fd, const char *str);
 
 ssize_t my_strlen(const char *str);
 int my_atoi(const char *str);
