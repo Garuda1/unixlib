@@ -27,7 +27,10 @@ SRC_DIR = source
 # Actual source files
 SRCS = $(SRC_DIR)/my_putc.c \
 			 $(SRC_DIR)/my_puts.c \
-			 $(SRC_DIR)/my_strlen.c
+			 $(SRC_DIR)/my_strlen.c\
+			 $(SRC_DIR)/my_errc.c \
+			 $(SRC_DIR)/my_errs.c \
+			 $(SRC_DIR)/my_atoi.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
