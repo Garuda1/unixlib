@@ -22,7 +22,7 @@
 
 #include  <sys/types.h>
 
-int my_isdigit(int c);
+int my_isdigit(const int c);
 
 ssize_t my_putc(const char c);
 ssize_t my_puts(const char *str);
