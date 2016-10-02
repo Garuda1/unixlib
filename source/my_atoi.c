@@ -1,3 +1,11 @@
+/*
+ * my_errc.c
+ *
+ * Contributors:
+ * - varshit97
+ *
+ */
+
 #include<unixlib.h>
 #include<stdio.h>
   
