@@ -30,7 +30,9 @@ SRCS = $(SRC_DIR)/my_putc.c \
 			 $(SRC_DIR)/my_strlen.c\
 			 $(SRC_DIR)/my_errc.c \
 			 $(SRC_DIR)/my_errs.c \
-			 $(SRC_DIR)/my_atoi.c
+			 $(SRC_DIR)/my_atoi.c \
+			 $(SRC_DIR)/my_islower.c \
+			 $(SRC_DIR)/my_isupper.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
