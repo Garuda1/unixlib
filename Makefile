@@ -33,7 +33,11 @@ SRCS = $(SRC_DIR)/my_putc.c \
 			 $(SRC_DIR)/my_atoi.c \
 			 $(SRC_DIR)/my_islower.c \
 			 $(SRC_DIR)/my_isupper.c \
-			 $(SRC_DIR)/my_getc.c
+			 $(SRC_DIR)/my_isdigit.c \
+			 $(SRC_DIR)/my_isspace.c \
+			 $(SRC_DIR)/my_getc.c \
+			 $(SRC_DIR)/my_fdputc.c \
+			 $(SRC_DIR)/my_fdputs.c \
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
