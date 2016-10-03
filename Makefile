@@ -15,8 +15,6 @@ CFLAGS += -Wall \
 					-Werror \
 					-pedantic \
 					-std=gnu89 \
-					-nostdlib \
-					-fno-builtin \
 					-I. \
 					-O2 \
 					-g3
