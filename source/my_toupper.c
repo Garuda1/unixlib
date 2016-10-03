@@ -10,7 +10,7 @@
 #include <unixlib.h>
 
 char my_toupper(const char c) {
-    if ((c >= 97) && (c <= 122)) {
+    if (my_islower(c)) {
         return c - 32;
     }
 
