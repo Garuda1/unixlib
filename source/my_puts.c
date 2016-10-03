@@ -20,9 +20,9 @@ ssize_t my_puts(const char *str)
   ssize_t count;
 
   count = 0;
-  while (*(str + count) != CHAR_NULL)
+  while (str[count] != CHAR_NULL)
   {
-    if (my_putc(*(str + count)) == FAILURE)
+    if (my_putc(str[count]) == FAILURE)
       return (FAILURE);
     ++count;
   }

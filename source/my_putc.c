@@ -18,5 +18,5 @@
 
 ssize_t my_putc(const char c)
 {
-  return ((write(STDOUT_FD, &c, sizeof(char)) != -1) ? FAILURE : SUCCESS);
+  return ((write(STDOUT_FD, &c, sizeof(char)) == -1) ? FAILURE : SUCCESS);
 }
