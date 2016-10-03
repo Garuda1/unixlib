@@ -1,5 +1,5 @@
 /*
- * my_tolwer.c
+ * my_tolower.c
  *
  * Licensed under GNU GPL v3
  * Contributors:

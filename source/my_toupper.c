@@ -1,5 +1,5 @@
 /*
- * my_upper.c
+ * my_toupper.c
  *
  * Licensed under GNU GPL v3
  * Contributors:
