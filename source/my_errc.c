@@ -18,5 +18,5 @@
 
 ssize_t my_errc(const char c)
 {
-  return ((write(STDERR_FD, &c, sizeof(char)) != -1) ? FAILURE : SUCCESS);
+  return ((write(STDERR_FD, &c, sizeof(char)) == -1) ? FAILURE : SUCCESS);
 }
