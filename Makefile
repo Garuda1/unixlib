@@ -41,7 +41,8 @@ SRCS = $(SRC_DIR)/my_putc.c \
 			 $(SRC_DIR)/my_tolower.c \
 			 $(SRC_DIR)/my_toupper.c  \
 			 $(SRC_DIR)/my_openfd.c \
-			 $(SRC_DIR)/my_closefd.c
+			 $(SRC_DIR)/my_closefd.c \
+			 $(SRC_DIR)/my_memcpy.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib

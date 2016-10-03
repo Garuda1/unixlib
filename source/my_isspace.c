@@ -4,6 +4,7 @@
  * Licensed under GNU GPL v3
  * Contributors:
  * - Rodrigo González López (SametSisartenep)
+ * - Garuda1 <garuda1@protonmail.com>
  *
  */
 
@@ -19,5 +20,5 @@
 
 int my_isspace(const int c)
 {
-  return c == ' ' || (unsigned)c-'\t' < 5;
+  return ((c == CHAR_SPACE || (unsigned)c-CHAR_TAB < 5) ? TRUE : FALSE);
 }

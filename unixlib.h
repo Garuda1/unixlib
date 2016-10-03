@@ -15,6 +15,10 @@
 #define STDOUT_FD 1
 #define STDERR_FD 2
 
+/* Boolean values */
+#define FALSE 0
+#define TRUE  1
+
 /* my_openfd modes */
 #define OPEN_WRITE 1
 #define OPEN_READ  2
@@ -35,6 +39,8 @@
 /* Special ASCII characters */
 #define CHAR_NULL     '\0'
 #define CHAR_NEWLINE  '\n'
+#define CHAR_TAB      '\t'
+#define CHAR_SPACE    ' '
 
 #include  <sys/types.h>
 
@@ -70,5 +76,6 @@ ssize_t my_strlen(const char *str);
 
 /* Misc functions */
 int my_atoi(const char *str);
+void *my_memcpy(void *dest, const void *src, const size_t count);
 
 #endif

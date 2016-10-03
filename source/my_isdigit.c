@@ -17,5 +17,5 @@
 
 int my_isdigit(const int c)
 {
-  return (unsigned)c-'0' < 10;
+  return (((unsigned)c-'0' < 10) ? TRUE : FALSE);
 }
