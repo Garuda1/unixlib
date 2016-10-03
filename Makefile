@@ -38,6 +38,8 @@ SRCS = $(SRC_DIR)/my_putc.c \
 			 $(SRC_DIR)/my_getc.c \
 			 $(SRC_DIR)/my_fdputc.c \
 			 $(SRC_DIR)/my_fdputs.c \
+			 $(SRC_DIR)/my_tolower.c \
+			 $(SRC_DIR)/my_toupper.c 
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
