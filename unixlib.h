@@ -15,6 +15,10 @@
 #define STDOUT_FD 1
 #define STDERR_FD 2
 
+/* my_openfd modes */
+#define OPEN_WRITE 1
+#define OPEN_READ  2
+
 /* Error checking */
 #define SUCCESS 0
 #define FAILURE -1
@@ -43,6 +47,10 @@ int my_isspace(const int c);
 /* Character transformation functions */
 char my_tolower(const char c);
 char my_toupper(const char c);
+
+/* File descriptor manipulation */
+int my_fopenfd(const char *path, const int mode);
+void my_closefd(const int fd);
 
 /* Input/Output (stdout) */
 ssize_t my_putc(const char c);

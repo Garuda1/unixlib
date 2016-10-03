@@ -39,7 +39,9 @@ SRCS = $(SRC_DIR)/my_putc.c \
 			 $(SRC_DIR)/my_fdputc.c \
 			 $(SRC_DIR)/my_fdputs.c \
 			 $(SRC_DIR)/my_tolower.c \
-			 $(SRC_DIR)/my_toupper.c 
+			 $(SRC_DIR)/my_toupper.c  \
+			 $(SRC_DIR)/my_openfd.c \
+			 $(SRC_DIR)/my_closefd.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
