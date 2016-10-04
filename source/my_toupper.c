@@ -4,6 +4,7 @@
  * Licensed under GNU GPL v3
  * Contributors:
  * - dbradf
+ * - Garuda1 <garuda1@protonmail.com>
  *
  */
 

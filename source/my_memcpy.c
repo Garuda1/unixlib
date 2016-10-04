@@ -8,6 +8,7 @@
  */
 
 #include <unixlib.h>
+#include <sys/types.h>
 
 /*
  * This function copies n bytes from src to dest,
