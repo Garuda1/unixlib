@@ -1,4 +1,5 @@
 language: c
 compiler: gcc
+sudo: required
 install: valgrind
 script: make test
