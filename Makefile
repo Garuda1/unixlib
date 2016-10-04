@@ -54,13 +54,13 @@ OBJS = $(SRCS:.c=.o)
 NAME = unixlib
 
 all : $(OBJS)
-  ar rcs $(NAME).a $(OBJS)
+	  ar rcs $(NAME).a $(OBJS)
 
 clean :
-  $(RM) $(OBJS)
+	  $(RM) $(OBJS)
 
 fclean : clean
-  $(RM) $(NAME).a
+	  $(RM) $(NAME).a
 
 re : fclean all
 
