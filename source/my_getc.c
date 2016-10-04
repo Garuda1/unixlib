@@ -21,5 +21,5 @@ char my_getc(void)
 {
   char c;
 
-  return ((write(STDIN_FD, &c, sizeof(char)) == -1) ? FAILURE : c);
+  return ((read(STDIN_FD, &c, sizeof(char)) == -1) ? FAILURE : c);
 }
