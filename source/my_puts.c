@@ -17,14 +17,15 @@
 
 ssize_t my_puts(const char *str)
 {
-  ssize_t count;
+  ssize_t count = 0;
 
-  count = 0;
-  while (str[count] != CHAR_NULL)
-  {
+  if (!str)
+    return FAILURE;
+
+  while (str[count] != CHAR_NULL) {
     if (my_putc(str[count]) == FAILURE)
-      return (FAILURE);
+      return FAILURE;
     ++count;
   }
-  return (count);
+  return count;
 }

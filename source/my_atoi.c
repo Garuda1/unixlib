@@ -8,15 +8,17 @@
  *
  */
 
-#include<unixlib.h>
-#include<stdio.h>
+#include <unixlib.h>
+#include <stdio.h>
   
 int my_atoi(const char *str)
 {
-    int value = 0, i;
-    for(i = 0;str[i] != CHAR_NULL;i++)
-	{
-        value = value*10 + str[i] - '0';
-	}
+    int value = 0;
+
+    if (!str)
+        return FAILURE;
+
+    for(; *str != CHAR_NULL; str++)
+        value = value * 10 + (*str) - '0';
     return value;
 }

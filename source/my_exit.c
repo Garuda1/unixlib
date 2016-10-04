@@ -24,7 +24,7 @@
 
 void my_exit(const char status)
 {
-  #if __x86_64__
+  #ifdef __x86_64__
   asm("mov $0x3C, %%rax;"
       "syscall"
       :

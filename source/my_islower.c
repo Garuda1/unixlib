@@ -19,5 +19,5 @@
 
 int my_islower(const int c)
 {
-  return (((c > 96) && (c < 123)) ? TRUE : FALSE);
+  return (('a' <= c && c <= 'z') ? TRUE : FALSE);
 }

@@ -10,10 +10,13 @@
 
 #include <unixlib.h>
 
-char my_toupper(const char c) {
-    if (my_islower(c)) {
-        return c - 32;
+char my_toupper(const char c) 
+{
+    if (my_isupper(c)) {
+        return c;
     }
-
+    if (my_islower(c)) {
+        return c - 'a' + 'A';
+    }
     return FAILURE;
 }
