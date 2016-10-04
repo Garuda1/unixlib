@@ -61,7 +61,7 @@ clean :
 	  $(RM) $(OBJS)
 
 fclean : clean
-	  $(RM) $(NAME).a test/$(NAME).a test/unixlib.h test/a.out
+	  $(RM) $(NAME).a test/$(NAME).a test/unixlib.h test/test
 
 re : fclean all
 
