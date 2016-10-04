@@ -1,5 +1,5 @@
 language: c
 compiler: gcc
 sudo: required
-install: valgrind
+install: DEBIAN_FRONTEND=noninteractive valgrind
 script: make test
