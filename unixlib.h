@@ -10,6 +10,9 @@
 #ifndef _UNIXLIB_H
 #define _UNIXLIB_H
 
+/* Special values */
+#define MY_NULL 0
+
 /* File descriptors */
 #define STDIN_FD  0
 #define STDOUT_FD 1
@@ -44,6 +47,28 @@
 
 #include  <sys/types.h>
 
+/* Memory allocation */
+void my_free(const void *ptr);
+void *my_malloc(const size_t size);
+void *my_calloc(const size_t nmemb, const size_t size);
+
+/* Memory allocation (do not use) */
+typedef struct s_memchunk t_memchunk;
+struct s_memchunk
+{
+  t_memchunk *next;
+  t_memchunk *prev;
+  size_t     size;
+  int        is_free;
+  void       *data;
+};
+
+size_t my_malloc_align(const size_t size);
+void *my_malloc_start(void);
+t_memchunk *my_malloc_findchunk(const size_t size, t_memchunk **heap_ptr);
+void my_malloc_mergechunk(t_memchunk *chunk);
+void my_malloc_splitnextchunk(t_memchunk *chunk, const size_t size);
+
 /* Character checking functions */
 int my_isdigit(const int c);
 int my_islower(const int c);
@@ -77,5 +102,6 @@ ssize_t my_strlen(const char *str);
 /* Misc functions */
 int my_atoi(const char *str);
 void *my_memcpy(void *dest, const void *src, const size_t count);
+void my_exit(const char status);
 
 #endif
