@@ -48,7 +48,8 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/malloc/my_malloc_mergechunk.c \
        $(SRC_DIR)/malloc/my_malloc_splitnextchunk.c \
        $(SRC_DIR)/malloc/my_malloc_start.c \
-       $(SRC_DIR)/my_exit.c
+       $(SRC_DIR)/my_exit.c \
+       $(SRC_DIR)/my_fdgetc.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
