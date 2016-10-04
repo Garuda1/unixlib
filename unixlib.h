@@ -4,6 +4,8 @@
  * Licensed under GNU GPL v3
  * Contributors:
  * - Garuda1
+ * - SametSisartenep
+ * - varshit97
  *
  */
 
