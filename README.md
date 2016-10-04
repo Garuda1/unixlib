@@ -1,5 +1,6 @@
 # unixlib
-[](https://travis-ci.org/Garuda1/unixlib.svg?branch=master)
+
+[![Build Status](https://travis-ci.org/Garuda1/unixlib.svg?branch=master)](https://travis-ci.org/Garuda1/unixlib)
 
 C standard library replacement for UNIX systems created for Hacktoberfest 2016.
 
