@@ -52,5 +52,5 @@ int my_openfd(const char *path, const int mode)
   int fd;
 
   fd = open(path, to_stdcnst(mode));
-  return (fd);
+  return ((fd == - 1) ? FAILURE : fd);
 }
