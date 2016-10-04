@@ -30,7 +30,7 @@
 
 /* Error checking */
 #define SUCCESS 0
-#define FAILURE -1
+#define FAILURE (-1)
 
 /* Terminal colour */
 #define COLOUR_RED     "\x1b[0;31m"

@@ -13,14 +13,12 @@
   
 int my_atoi(const char *str)
 {
-    int value = 0, i;
+    int value = 0;
 
     if (!str)
-    	return FAILURE;
+        return FAILURE;
 
-    for(i = 0; str[i] != CHAR_NULL; i++)
-	{
-        value = value * 10 + str[i] - '0';
-	}
+    for(; *str != CHAR_NULL; str++)
+        value = value * 10 + (*str) - '0';
     return value;
 }

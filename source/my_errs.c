@@ -17,17 +17,15 @@
 
 ssize_t   my_errs(const char *str)
 {
-  ssize_t count;
+  ssize_t count = 0;
 
   if (!str)
-  	return FAILURE;
+    return FAILURE;
 
-  count = 0;
-  while (*(str + count))
-  {
+  while (*(str + count)) {
     if (my_errc(*(str + count)) == FAILURE)
-      return (FAILURE);
+      return FAILURE;
     ++count;
   }
-  return (count);
+  return count;
 }

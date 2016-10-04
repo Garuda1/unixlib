@@ -19,16 +19,14 @@
 /* Note: optimizations are more than welcome! */
 void *my_memcpy(void *dest, const void *src, const size_t n)
 {
-  size_t count;
+  size_t count = 0;
 
   if (!dest || !src)
-  	return MY_NULL;
+    return MY_NULL;
 
-  count = 0;
-  while (count < n)
-  {
-    *(((char *)dest) + count) = *(((char *)src) + count);
+  while (count < n) {
+    *((char *)dest + count) = *((char *)src + count);
     ++count;
   }
-  return (dest);
+  return dest;
 }

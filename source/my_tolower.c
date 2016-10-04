@@ -10,10 +10,11 @@
 
 #include <unixlib.h>
 
-char my_tolower(const char c) {
-	if (my_islower(c)) {
-		return c;
-	}
+char my_tolower(const char c) 
+{
+    if (my_islower(c)) {
+        return c;
+    }
     if (my_isupper(c)) {
         return c - 'A' + 'a';
     }

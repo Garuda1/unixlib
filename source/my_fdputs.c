@@ -12,17 +12,15 @@
 
 ssize_t my_fdputs(const int fd, const char *str)
 {
-  ssize_t count;
+  ssize_t count = 0;
 
   if (!str)
-  	return FAILURE;
+    return FAILURE;
 
-  count = 0;
-  while (*(str + count) != CHAR_NULL)
-  {
+  while (*(str + count) != CHAR_NULL) {
     if (my_fdputc(fd, *str + count) == FAILURE)
-      return (FAILURE);
+      return FAILURE;
     ++count;
   }
-  return (count);
+  return count;
 }
