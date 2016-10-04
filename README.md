@@ -1,4 +1,6 @@
 # unixlib
+[](https://travis-ci.org/Garuda1/unixlib.svg?branch=master)
+
 C standard library replacement for UNIX systems created for Hacktoberfest 2016.
 
 This library consists of replacements for simple C standard functions, important data structures, and everyday algorithms. It mainly focuses on getting rid of the error-checking/cross platform features to reduce the functions to small pieces of understandable code which easily fit in one source file.
