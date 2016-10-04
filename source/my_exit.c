@@ -13,6 +13,13 @@
  * This function stops execution using
  * the Linux exit syscall.
  *
+ * EDIT:
+ *   DO NOT USE THIS FUNCTION UNLESS YOU
+ *   ARE COMPILING ON ANY OF THOSE SYSTEMS:
+ *   - Linux x86
+ *   - Linux x86_64
+ *   IF YOU ADD SUPPORT FOR ANOTHER PLATFORM,
+ *   PLEASE UPDATE THIS LIST ACCORDINGLY.
  */
 
 void my_exit(const char status)
