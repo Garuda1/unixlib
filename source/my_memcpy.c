@@ -21,6 +21,9 @@ void *my_memcpy(void *dest, const void *src, const size_t n)
 {
   size_t count;
 
+  if (!dest || !src)
+  	return MY_NULL;
+
   count = 0;
   while (count < n)
   {

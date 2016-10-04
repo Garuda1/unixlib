@@ -14,6 +14,9 @@ ssize_t my_fdputs(const int fd, const char *str)
 {
   ssize_t count;
 
+  if (!str)
+  	return FAILURE;
+
   count = 0;
   while (*(str + count) != CHAR_NULL)
   {

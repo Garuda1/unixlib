@@ -19,8 +19,10 @@ ssize_t   my_errs(const char *str)
 {
   ssize_t count;
 
-  count = 0;
+  if (!str)
+  	return FAILURE;
 
+  count = 0;
   while (*(str + count))
   {
     if (my_errc(*(str + count)) == FAILURE)

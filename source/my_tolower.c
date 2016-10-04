@@ -11,9 +11,11 @@
 #include <unixlib.h>
 
 char my_tolower(const char c) {
+	if (my_islower(c)) {
+		return c;
+	}
     if (my_isupper(c)) {
-        return c + 32;
+        return c - 'A' + 'a';
     }
-
     return FAILURE;
 }

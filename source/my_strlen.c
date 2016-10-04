@@ -19,6 +19,9 @@
 ssize_t my_strlen(const char *str)
 {
   ssize_t count;
+  
+  if (!str)
+  	return FAILURE;
 
   count = 0;
   while (*(str + count) != CHAR_NULL &&
