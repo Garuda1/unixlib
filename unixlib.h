@@ -13,7 +13,7 @@
 #define _UNIXLIB_H
 
 /* Special values */
-#define MY_NULL 0
+#define MY_NULL ((void*)0)
 
 /* File descriptors */
 #define STDIN_FD  0
