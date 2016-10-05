@@ -61,8 +61,12 @@ clean :
 	  $(RM) $(OBJS)
 
 fclean : clean
-	  $(RM) $(NAME).a
+	  $(RM) $(NAME).a test/$(NAME).a test/unixlib.h test/a.out
 
 re : fclean all
 
-.PHONY : all clean fclean re
+test: re
+	cp $(NAME).a unixlib.h test && cd test && $(CC) -o test test_src.c $(NAME).a
+	exec valgrind test/test
+
+.PHONY : all clean fclean re test

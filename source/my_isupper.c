@@ -18,5 +18,5 @@
 
 int my_isupper(const int c)
 {
-  return (((c > 65) && (c < 91)) ? TRUE : FALSE);
+  return (((c > 64) && (c < 91)) ? TRUE : FALSE);
 }
