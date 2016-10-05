@@ -14,7 +14,7 @@ CFLAGS += -Wall \
 	  -Wextra \
 	  -Werror \
 	  -pedantic \
-	  -std=gnu89 \
+	  -std=c99 \
 	  -I. \
 	  -O2 \
 	  -g3
@@ -34,7 +34,7 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/my_isdigit.c \
        $(SRC_DIR)/my_isspace.c \
        $(SRC_DIR)/my_getc.c \
-			 $(SRC_DIR)/my_gets.c \
+       $(SRC_DIR)/my_gets.c \
        $(SRC_DIR)/my_fdputc.c \
        $(SRC_DIR)/my_fdputs.c \
        $(SRC_DIR)/my_tolower.c \
@@ -51,7 +51,7 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/malloc/my_malloc_start.c \
        $(SRC_DIR)/my_exit.c \
        $(SRC_DIR)/my_fdgetc.c \
-			 $(SRC_DIR)/my_fdgets.c
+       $(SRC_DIR)/my_fdgets.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
