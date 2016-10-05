@@ -89,6 +89,7 @@ void my_closefd(const int fd);
 ssize_t my_putc(const char c);
 ssize_t my_puts(const char *str);
 char my_getc(void);
+ssize_t my_gets(char *str);
 
 /* Input/Output (stderr) */
 ssize_t my_errc(const char c);
@@ -97,6 +98,8 @@ ssize_t my_errs(const char *str);
 /* Input/Output (other file descriptor) */
 ssize_t my_fdputc(const int fd, const char c);
 ssize_t my_fdputs(const int fd, const char *str);
+char my_fdgetc(const int fd);
+ssize_t my_fdgets(const int fd, char *str);
 
 /* String manipulation functions */
 ssize_t my_strlen(const char *str);

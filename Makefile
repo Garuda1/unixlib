@@ -34,6 +34,7 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/my_isdigit.c \
        $(SRC_DIR)/my_isspace.c \
        $(SRC_DIR)/my_getc.c \
+			 $(SRC_DIR)/my_gets.c \
        $(SRC_DIR)/my_fdputc.c \
        $(SRC_DIR)/my_fdputs.c \
        $(SRC_DIR)/my_tolower.c \
@@ -49,7 +50,8 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/malloc/my_malloc_splitnextchunk.c \
        $(SRC_DIR)/malloc/my_malloc_start.c \
        $(SRC_DIR)/my_exit.c \
-       $(SRC_DIR)/my_fdgetc.c
+       $(SRC_DIR)/my_fdgetc.c \
+			 $(SRC_DIR)/my_fdgets.c
 
 OBJS = $(SRCS:.c=.o)
 NAME = unixlib
@@ -61,7 +63,7 @@ clean :
 	  $(RM) $(OBJS)
 
 fclean : clean
-	  $(RM) $(NAME).a test/$(NAME).a test/unixlib.h test/a.out
+	  $(RM) $(NAME).a test/$(NAME).a test/unixlib.h test/test
 
 re : fclean all
 
