@@ -30,16 +30,12 @@ To recompile everything:
 
     $ make re
 
-To test if the lib works (also recompiles it):
-
-    $ make test
-
-To recompile everything and install the library:
+To install the library:
 
     # make install
 
-The compiled lib will be accessible as `unixlib.a`. This can be changed in the Makefile. Its header, unixlib.h, is available in the root directory. Just link your object files to `unixlib.a` and include `unixlib.h` in your source files/headers.
-
 # Documentation
+
+To use the library, include `<unixlib.h>` in your file, and use the `-lunixlib` flag.
 
 Every function, structure, or global variable from the library is defined in `unixlib.h`. Documentation regarding a specific feature can be found in the corresponding source file.
