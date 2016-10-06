@@ -16,7 +16,7 @@
  *
  */
 
-size_t malloc_align(const size_t size)
+size_t my_malloc_align(const size_t size)
 {
   return ((size + (sizeof(size_t) - 1)) & ~(sizeof(size_t) - 1));
 }

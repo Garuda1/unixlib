@@ -18,20 +18,20 @@
  *
  */
 
- void *malloc_start(void)
- {
-   static
-   t_memchunk *chunk = MY_NULL;
-   if (chunk == MY_NULL)
-   {
-     chunk = sbrk(my_malloc_align(sizeof(t_memchunk)));
-     if (chunk == (void*) -1)
-       my_exit(0x7F);
-     chunk -> next = MY_NULL;
-     chunk -> prev = MY_NULL;
-     chunk -> size = 0;
-     chunk -> is_free = 0;
-     chunk -> data = MY_NULL;
-   }
-   return (chunk);
- }
+void *my_malloc_start(void)
+{
+  static
+  t_memchunk *chunk = MY_NULL;
+  if (chunk == MY_NULL)
+  {
+    chunk = sbrk(my_malloc_align(sizeof(t_memchunk)));
+    if (chunk == (void*) -1)
+      my_exit(0x7F);
+    chunk -> next = MY_NULL;
+    chunk -> prev = MY_NULL;
+    chunk -> size = 0;
+    chunk -> is_free = 0;
+    chunk -> data = MY_NULL;
+  }
+  return (chunk);
+}

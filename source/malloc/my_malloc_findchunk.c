@@ -17,7 +17,7 @@
  *
  */
 
-t_memchunk *malloc_findchunk(const size_t size, t_memchunk **heap_ptr)
+t_memchunk *my_malloc_findchunk(const size_t size, t_memchunk **heap_ptr)
 {
   t_memchunk *chunk;
 

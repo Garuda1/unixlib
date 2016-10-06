@@ -24,7 +24,7 @@ CFLAGS += -Wall \
 # The directory which contains the source files
 SRC_DIR = source
 
-PREFIX = /usr/local
+PREFIX = /usr/
 
 # Actual source files
 SRCS = $(SRC_DIR)/my_putc.c \
