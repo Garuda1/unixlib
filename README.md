@@ -34,6 +34,10 @@ To test if the lib works (also recompiles it):
 
     $ make test
 
+To recompile everything and install the library:
+
+    $ make install
+
 The compiled lib will be accessible as `unixlib.a`. This can be changed in the Makefile. Its header, unixlib.h, is available in the root directory. Just link your object files to `unixlib.a` and include `unixlib.h` in your source files/headers.
 
 # Documentation
