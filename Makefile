@@ -14,7 +14,7 @@ CFLAGS += -Wall \
 	  -Wextra \
 	  -Werror \
 	  -pedantic \
-	  -std=c99 \
+	  -std=gnu89 \
 	  -I. \
 	  -O2 \
 	  -g3

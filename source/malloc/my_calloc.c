@@ -24,7 +24,7 @@ void *my_calloc(const size_t size)
 {
   void *ptr;
   int fd;
-  
+
   if ((ptr = my_malloc(size)) == MY_NULL)
     return (MY_NULL);
   fd = my_openfd(PATH_NULL, OPEN_READ);
