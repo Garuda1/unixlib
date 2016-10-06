@@ -2,4 +2,4 @@ language: c
 compiler: gcc
 sudo: required
 install: sudo apt-get install valgrind
-script: make test
+script: make && sudo make install

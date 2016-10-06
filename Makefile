@@ -17,7 +17,9 @@ CFLAGS += -Wall \
 	  -std=gnu89 \
 	  -I. \
 	  -O2 \
-	  -g3
+	  -g3 \
+		-c \
+		-fpic
 
 # The directory which contains the source files
 SRC_DIR = source
@@ -55,27 +57,23 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/my_fdgetc.c \
        $(SRC_DIR)/my_fdgets.c
 
-OBJS = $(SRCS:.c=.o)
 NAME = unixlib
+OBJS = $(SRCS:.c=.o)
 
 all : $(OBJS)
-	  ar rcs $(NAME).a $(OBJS)
+	  $(CC) -shared -o lib$(NAME).so $(OBJS)
 
 clean :
 	  $(RM) $(OBJS)
 
 fclean : clean
-	  $(RM) $(NAME).a test/$(NAME).a test/unixlib.h test/test
+	  $(RM) lib$(NAME).so test/test
 
 re : fclean all
 
-install : re
-	cp $(NAME).a $(PREFIX)/lib
+install :
+	cp lib$(NAME).so $(PREFIX)/lib/
 	cp unixlib.h $(PREFIX)/include
 	ldconfig
 
-test: re
-	cp $(NAME).a unixlib.h test && cd test && $(CC) -o test test_src.c $(NAME).a
-	exec valgrind test/test
-
-.PHONY : all clean fclean re test
+PHONY : all clean fclean re test
