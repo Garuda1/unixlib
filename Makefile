@@ -72,6 +72,7 @@ re : fclean all
 install : re
 	cp $(NAME).a $(PREFIX)/lib
 	cp unixlib.h $(PREFIX)/include
+	ldconfig
 
 test: re
 	cp $(NAME).a unixlib.h test && cd test && $(CC) -o test test_src.c $(NAME).a
