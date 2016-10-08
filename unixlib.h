@@ -20,6 +20,10 @@
 #define STDOUT_FD 1
 #define STDERR_FD 2
 
+/* File paths */
+#define RAND_PATH "/dev/urandom"
+#define ZERO_PATH "/dev/null"
+
 /* Boolean values */
 #define FALSE 0
 #define TRUE  1
@@ -82,7 +86,7 @@ char my_tolower(const char c);
 char my_toupper(const char c);
 
 /* File descriptor manipulation */
-int my_fopenfd(const char *path, const int mode);
+int my_openfd(const char *path, const int mode);
 void my_closefd(const int fd);
 
 /* Input/Output (stdout) */

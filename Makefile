@@ -55,7 +55,8 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/malloc/my_malloc_start.c \
        $(SRC_DIR)/my_exit.c \
        $(SRC_DIR)/my_fdgetc.c \
-       $(SRC_DIR)/my_fdgets.c
+       $(SRC_DIR)/my_fdgets.c \
+			 $(SRC_DIR)/my_rand.c
 
 NAME = unixlib
 OBJS = $(SRCS:.c=.o)
@@ -67,7 +68,7 @@ clean :
 	  $(RM) $(OBJS)
 
 fclean : clean
-	  $(RM) lib$(NAME).so test/test
+	  $(RM) lib$(NAME).so
 
 re : fclean all
 
