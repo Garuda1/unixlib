@@ -35,7 +35,7 @@ void *my_calloc(const size_t nmemb, const size_t size)
       
   if ((stat = read(fd, ptr, total)) < 0 || stat != ((ssize_t) total) ) {
     my_free(ptr);
-    return (MY_NULL);
+    ptr = MY_NULL;
   }
   
   my_closefd(fd);
