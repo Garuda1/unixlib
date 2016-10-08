@@ -13,7 +13,8 @@
 
 /*
  * This function returns sizeof(int)
- * bytes read from RAND_PATH
+ * bytes read from RAND_PATH, or 0
+ * on error.
  *
  */
 
@@ -31,7 +32,11 @@ int my_rand(void)
   int fd;
 
   fd = my_openfd(RAND_PATH, OPEN_READ);
-  read(fd, &val, sizeof(int));
+  if (read(fd, &val, sizeof(int)) == FAILURE)
+  {
+    close(fd);
+    return (0);
+  }
   close(fd);
   return (val);
 }
