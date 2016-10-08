@@ -12,7 +12,7 @@
 #include <sys/types.h>
 
 /*
- * This function allocates size bytes of
+ * This function allocates nmemb elements of size bytes of
  * useable memory from the heap, and
  * returns a pointer to the start of the
  * allocated portion. It also zeroes the
@@ -20,12 +20,12 @@
  *
  */
 
-void *my_calloc(const size_t size)
+void *my_calloc(const size_t nmemb, const size_t size);
 {
   void *ptr;
   int fd;
 
-  if ((ptr = my_malloc(size)) == MY_NULL)
+  if ((ptr = my_malloc(size*nmemb)) == MY_NULL)
     return (MY_NULL);
   fd = my_openfd(PATH_NULL, OPEN_READ);
   read(fd, ptr, size);
