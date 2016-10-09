@@ -1,7 +1,9 @@
 # unixlib
 
 ![Branch master](https://img.shields.io/badge/branch-master-brightgreen.svg?style=flat-square)
+
 ![Build Status](https://travis-ci.org/Garuda1/unixlib.svg?branch=master)
+
 ![License](https://img.shields.io/aur/license/yaourt.svg?maxAge=2592000)
 
 C standard library replacement for UNIX systems created for Hacktoberfest 2016.
