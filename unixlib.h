@@ -100,6 +100,7 @@ ssize_t my_gets(char *str);
 /* Input/Output (stderr) */
 ssize_t my_errc(const char c);
 ssize_t my_errs(const char *str);
+void my_errn(const int n);
 
 /* Input/Output (other file descriptor) */
 ssize_t my_fdputc(const int fd, const char c);

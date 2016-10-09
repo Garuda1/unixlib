@@ -13,11 +13,9 @@ RM = rm -f
 CFLAGS += -Wall \
 	  -Wextra \
 	  -Werror \
-	  -pedantic \
 	  -std=gnu89 \
 	  -I. \
-	  -O2 \
-	  -g3 \
+		-g \
 		-c \
 		-fpic
 
@@ -59,6 +57,7 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/my_fdgets.c \
 			 $(SRC_DIR)/my_putn.c \
 			 $(SRC_DIR)/my_fdputn.c \
+			 $(SRC_DIR)/my_errn.c \
 	   $(SRC_DIR)/my_rand.c \
 	   $(SRC_DIR)/linked-list/my_list_init.c \
 	   $(SRC_DIR)/linked-list/my_list_free.c \
