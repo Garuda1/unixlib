@@ -114,4 +114,24 @@ int my_atoi(const char *str);
 void *my_memcpy(void *dest, const void *src, const size_t count);
 void my_exit(const char status);
 
+/* Node structures*/
+typedef struct s_node t_node;
+struct s_node 
+{
+    void *value;
+    t_node *next;
+};
+
+/* Linked list functions */
+typedef struct s_list t_list;
+struct s_list 
+{
+    t_node *start;
+    t_node *end;
+};
+
+t_list *my_list_init();
+void my_list_free(t_list *l);
+t_node *my_list_append(t_list *l, void *value);
+
 #endif
