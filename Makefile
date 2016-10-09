@@ -78,7 +78,7 @@ re : fclean all
 
 install :
 	cp lib$(NAME).so $(PREFIX)/lib/
-	cp unixlib.h $(PREFIX)/include
+	cp unixlib.h $(PREFIX)/local/include
 	ldconfig
 
 PHONY : all clean fclean re
