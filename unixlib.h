@@ -23,7 +23,7 @@
 
 /* File paths */
 #define RAND_PATH "/dev/urandom"
-#define ZERO_PATH "/dev/null"
+#define NULL_PATH "/dev/null"
 
 /* Boolean values */
 #define FALSE 0
