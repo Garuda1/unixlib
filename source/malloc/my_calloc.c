@@ -20,15 +20,24 @@
  *
  */
 
-void *my_calloc(const size_t nmemb, const size_t size);
+void *my_calloc(const size_t nmemb, const size_t size)
 {
   void *ptr;
   int fd;
+  ssize_t stat;
+  size_t total = size * nmemb;
 
-  if ((ptr = my_malloc(size*nmemb)) == MY_NULL)
+
+  if ((ptr = my_malloc(total)) == MY_NULL)
     return (MY_NULL);
-  fd = my_openfd(PATH_NULL, OPEN_READ);
-  read(fd, ptr, size);
+
+  fd = my_openfd(ZERO_PATH, OPEN_READ);
+      
+  if ((stat = read(fd, ptr, total)) < 0 || stat != ((ssize_t) total) ) {
+    my_free(ptr);
+    ptr = MY_NULL;
+  }
+  
   my_closefd(fd);
   return (ptr);
 }

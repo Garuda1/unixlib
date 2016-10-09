@@ -48,6 +48,7 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/my_memcpy.c \
        $(SRC_DIR)/malloc/my_free.c \
        $(SRC_DIR)/malloc/my_malloc.c \
+       $(SRC_DIR)/malloc/my_calloc.c \
        $(SRC_DIR)/malloc/my_malloc_align.c \
        $(SRC_DIR)/malloc/my_malloc_findchunk.c \
        $(SRC_DIR)/malloc/my_malloc_mergechunk.c \
