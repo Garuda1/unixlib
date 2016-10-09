@@ -81,4 +81,4 @@ install :
 	cp unixlib.h $(PREFIX)/include
 	ldconfig
 
-PHONY : all clean fclean re test
+PHONY : all clean fclean re
