@@ -30,6 +30,7 @@ void my_exit(const char status)
       :
       :"D"(status)
   );
+  /* ducks out for harambe */
   #else
   asm("mov $0x01, %%al;"
       "int $0x80"
