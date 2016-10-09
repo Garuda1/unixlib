@@ -93,6 +93,7 @@ void my_closefd(const int fd);
 /* Input/Output (stdout) */
 ssize_t my_putc(const char c);
 ssize_t my_puts(const char *str);
+void my_putn(const int n);
 char my_getc(void);
 ssize_t my_gets(char *str);
 
@@ -103,6 +104,7 @@ ssize_t my_errs(const char *str);
 /* Input/Output (other file descriptor) */
 ssize_t my_fdputc(const int fd, const char c);
 ssize_t my_fdputs(const int fd, const char *str);
+void my_fdputn(const int fd, const int n);
 char my_fdgetc(const int fd);
 ssize_t my_fdgets(const int fd, char *str);
 
@@ -116,7 +118,7 @@ void my_exit(const char status);
 
 /* Node structures*/
 typedef struct s_node t_node;
-struct s_node 
+struct s_node
 {
     void *value;
     t_node *next;
@@ -124,7 +126,7 @@ struct s_node
 
 /* Linked list functions */
 typedef struct s_list t_list;
-struct s_list 
+struct s_list
 {
     t_node *start;
     t_node *end;
