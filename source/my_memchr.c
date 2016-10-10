@@ -25,7 +25,7 @@ void *my_memchr(const void *str, const unsigned char c, const size_t n)
   while (count < n)
   {
     if (*((unsigned char *)str) == c)
-      return (str + count);
+      return ((void *)((unsigned char *)str) + count);
     ++count;
   }
   return (MY_NULL);
