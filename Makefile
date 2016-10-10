@@ -55,6 +55,7 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/my_exit.c \
        $(SRC_DIR)/my_fdgetc.c \
        $(SRC_DIR)/my_fdgets.c \
+       $(SRC_DIR)/my_memchr.c \
 			 $(SRC_DIR)/my_putn.c \
 			 $(SRC_DIR)/my_fdputn.c \
 			 $(SRC_DIR)/my_errn.c \
