@@ -88,7 +88,7 @@ char my_toupper(const char c);
 
 /* File descriptor manipulation */
 int my_openfd(const char *path, const int mode);
-void my_closefd(const int fd);
+int my_closefd(const int fd);
 
 /* Input/Output (stdout) */
 ssize_t my_putc(const char c);

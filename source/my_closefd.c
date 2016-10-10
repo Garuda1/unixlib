@@ -15,7 +15,7 @@
  *
  */
 
-void my_closefd(const int fd)
+int my_closefd(const int fd)
 {
-  close(fd);
+  return (close(fd) ? FAILURE : SUCCESS);
 }
