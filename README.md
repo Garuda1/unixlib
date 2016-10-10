@@ -12,6 +12,8 @@ This library consists of replacements for simple C standard functions, important
 
 The mindset in this project is to get rid of abstraction, focusing on what something is intended to do. As such, any form of object-oriented programming is prohibited. Keep it simple.
 
+For a complete and a detailed documentation, please refer to the [wiki](https://github.com/Garuda1/unixlib/wiki)
+
 # Compilation
 
 Compilation is achieved through the use of GNU Make. A makefile is provided in the root directory.
