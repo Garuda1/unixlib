@@ -59,10 +59,11 @@ SRCS = $(SRC_DIR)/my_putc.c \
 			 $(SRC_DIR)/my_putn.c \
 			 $(SRC_DIR)/my_fdputn.c \
 			 $(SRC_DIR)/my_errn.c \
-	   $(SRC_DIR)/my_rand.c \
-	   $(SRC_DIR)/linked-list/my_list_init.c \
-	   $(SRC_DIR)/linked-list/my_list_free.c \
-	   $(SRC_DIR)/linked-list/my_list_append.c \
+       $(SRC_DIR)/my_rand.c \
+			 $(SRC_DIR)/my_retstr.c \
+       $(SRC_DIR)/linked-list/my_list_init.c \
+       $(SRC_DIR)/linked-list/my_list_free.c \
+       $(SRC_DIR)/linked-list/my_list_append.c \
 
 NAME = unixlib
 OBJS = $(SRCS:.c=.o)

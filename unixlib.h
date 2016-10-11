@@ -117,6 +117,7 @@ ssize_t my_strlen(const char *str);
 int my_atoi(const char *str);
 void *my_memcpy(void *dest, const void *src, const size_t count);
 void my_exit(const char status);
+int my_retstr(const int ret, const char *str);
 
 /* Node structures*/
 typedef struct s_node t_node;
