@@ -112,6 +112,7 @@ ssize_t my_fdgets(const int fd, char *str);
 /* String manipulation functions */
 void *my_memchr(const void *str, const unsigned char c, const size_t n);
 ssize_t my_strlen(const char *str);
+int my_strcmp(const char *s1, const char *s2);
 
 /* Misc functions */
 int my_atoi(const char *str);
