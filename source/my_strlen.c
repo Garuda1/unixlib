@@ -21,8 +21,7 @@ ssize_t my_strlen(const char *str)
   ssize_t count;
 
   count = 0;
-  while (str[count] != CHAR_NULL &&
-         count < (ssize_t)sizeof(str))
+  while (str[count] != CHAR_NULL)
     ++count;
   if (count == sizeof(str))
     return (FAILURE);
