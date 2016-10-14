@@ -64,7 +64,8 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/linked-list/my_list_init.c \
        $(SRC_DIR)/linked-list/my_list_free.c \
        $(SRC_DIR)/linked-list/my_list_append.c \
-			 $(SRC_DIR)/my_strcmp.c
+			 $(SRC_DIR)/my_strcmp.c \
+			 $(SRC_DIR)/my_strcpy.c
 
 NAME = unixlib
 OBJS = $(SRCS:.c=.o)
