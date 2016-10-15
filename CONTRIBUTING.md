@@ -32,5 +32,6 @@
 - No, putting an hexdumped jpeg of your cat as a comment is not acceptable.
 - Don't use binary / octal / etc. You can only use the decimal and hexadecimal bases.
 - Update the Wiki after implementing a new feature!
+- If a constant is defined in `unixlib.h`, use this constant instead of its value in your code (ex: don't use `'\0'` but `CHAR_NULL`)
 
 Happy hacktoberfest :)
