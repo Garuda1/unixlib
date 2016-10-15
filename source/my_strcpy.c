@@ -3,6 +3,7 @@
  *
  * Contributors:
  * - Domenico Luciani aka DLion <domenicoleoneluciani@gmail.com>
+ * - Garuda1 <garuda1@protonmail.com>
  *
  */
 
@@ -21,10 +22,10 @@
 char *my_strcpy(char *dst, const char *src)
 {
   char *d = dst;
-  while (*src != '\0')
+  while (*src != CHAR_NULL)
   {
 	  *d++ = *src++;
   }
-  *d = '\0';
+  *d = CHAR_NULL;
   return (dst);
 }
