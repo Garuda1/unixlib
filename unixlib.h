@@ -121,6 +121,7 @@ char *my_strncpy(char *dst, const char *src, size_t num);
 /* Misc functions */
 int my_atoi(const char *str);
 void *my_memcpy(void *dest, const void *src, const size_t count);
+void *my_memset(void *ptr, int value, size_t num);
 void my_exit(const char status);
 int my_retstr(const int ret, const char *str);
 

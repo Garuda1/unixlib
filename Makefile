@@ -44,6 +44,7 @@ SRCS = $(SRC_DIR)/my_putc.c \
        $(SRC_DIR)/my_openfd.c \
        $(SRC_DIR)/my_closefd.c \
        $(SRC_DIR)/my_memcpy.c \
+       $(SRC_DIR)/my_memset.c \
        $(SRC_DIR)/malloc/my_free.c \
        $(SRC_DIR)/malloc/my_malloc.c \
        $(SRC_DIR)/malloc/my_calloc.c \
