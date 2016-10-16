@@ -83,6 +83,9 @@ fclean : clean
 
 re : fclean all
 
+shrimps:
+  cat .shrimps
+
 install :
 	cp lib$(NAME).so $(PREFIX)/lib/
 	cp unixlib.h $(PREFIX)/local/include
