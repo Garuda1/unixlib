@@ -84,11 +84,11 @@ fclean : clean
 re : fclean all
 
 shrimps:
-  cat .shrimps
+        cat .shrimps
 
 install :
 	cp lib$(NAME).so $(PREFIX)/lib/
 	cp unixlib.h $(PREFIX)/local/include
 	ldconfig
 
-PHONY : all clean fclean re
+PHONY : all clean fclean re shrimps install
