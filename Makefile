@@ -83,8 +83,8 @@ fclean : clean
 
 re : fclean all
 
-shrimps:
-        cat .shrimps
+shrimps :
+	cat .shrimps
 
 install :
 	cp lib$(NAME).so $(PREFIX)/lib/
