@@ -38,6 +38,10 @@ To install the library:
 
     # make install
 
+To `curl` the answer to life, the universe, and everything:
+
+    $ make shrimps
+
 # Documentation
 
 To use the library, include `<unixlib.h>` in your file, and use the `-lunixlib` flag.
