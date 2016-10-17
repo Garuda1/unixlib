@@ -23,11 +23,11 @@
   * - (OPEN_READ | OPEN_WRITE) (read and write)
   */
 
-/* This function is used to convert
+/*
+ * This function is used to convert
  * the mode to the standard constants
  */
 static
-inline
 int to_stdcnst(const int mode)
 {
   switch (mode)
