@@ -117,6 +117,7 @@ ssize_t my_strlen(const char *str);
 int my_strcmp(const char *s1, const char *s2);
 char *my_strcpy(char *dst, const char *src);
 char *my_strncpy(char *dst, const char *src, size_t num);
+char *my_strcat(char *dest, const char *src);
 
 /* Misc functions */
 int my_atoi(const char *str);
