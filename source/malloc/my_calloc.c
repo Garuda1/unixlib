@@ -8,6 +8,7 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <unistd.h>
 #include <sys/types.h>
 
@@ -32,12 +33,12 @@ void *my_calloc(const size_t nmemb, const size_t size)
     return (MY_NULL);
 
   fd = my_openfd(NULL_PATH, OPEN_READ);
-      
+
   if ((stat = read(fd, ptr, total)) < 0 || stat != ((ssize_t) total) ) {
     my_free(ptr);
     ptr = MY_NULL;
   }
-  
+
   my_closefd(fd);
   return (ptr);
 }

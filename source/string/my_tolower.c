@@ -9,6 +9,7 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-string.h>
 
 char my_tolower(const char c)
 {

@@ -7,6 +7,7 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-string.h>
 
 /*
  * This function compares two strings

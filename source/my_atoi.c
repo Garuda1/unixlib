@@ -9,8 +9,9 @@
  *
  */
 
-#include<unixlib.h>
-#include<stdio.h>
+#include <unixlib.h>
+#include <unixlib-string.h>
+#include <stdio.h>
 
 int my_atoi(const char *str)
 {

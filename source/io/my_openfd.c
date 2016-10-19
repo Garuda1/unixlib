@@ -9,6 +9,7 @@
 
 #include <fcntl.h>
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <unistd.h>
 
  /*

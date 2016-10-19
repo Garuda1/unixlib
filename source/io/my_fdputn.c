@@ -1,5 +1,5 @@
 /*
- * my_errn.c
+ * my_fdputn.c
  *
  * Licensed under GNU GPL v3
  * Contributors:
@@ -8,15 +8,16 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <sys/types.h>
 
 /*
  * This function prints nb
- * as ASCII to stderr
+ * as ASCII to fd
  *
  */
 
-void my_errn(const int n)
+void my_fdputn(const int fd, const int n)
 {
   int nb;
   int mod;
@@ -24,18 +25,18 @@ void my_errn(const int n)
   nb = n;
   mod = 0;
   if (nb < 10 && nb > -1)
-    my_errc(nb + 48);
+    my_fdputc(fd, nb + 48);
   if (nb < 0)
   {
-    my_errc('-');
+    my_fdputc(fd, '-');
     nb *= -1;
     if (nb < 10 && nb > -1)
-      my_errn(nb);
+      my_fdputn(fd, nb);
   }
   if (nb > 9)
   {
     mod = nb % 10;
-    my_errn(nb / 10);
-    my_errc(mod + 48);
+    my_fdputn(fd, nb / 10);
+    my_fdputc(fd, mod + 48);
   }
 }

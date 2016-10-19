@@ -8,6 +8,7 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-io.h>
 
 /*
  * This function prints str to the

@@ -23,30 +23,13 @@
 #define STDOUT_FD 1
 #define STDERR_FD 2
 
-/* File paths */
-#define RAND_PATH "/dev/urandom"
-#define NULL_PATH "/dev/null"
-
 /* Boolean values */
 #define FALSE 0
 #define TRUE  1
 
-/* my_openfd modes */
-#define OPEN_WRITE 1
-#define OPEN_READ  2
-
 /* Error checking */
 #define SUCCESS 0
 #define FAILURE -1
-
-/* Terminal colour */
-#define COLOUR_RED     "\x1b[0;31m"
-#define COLOUR_GREEN   "\x1b[0;32m"
-#define COLOUR_YELLOW  "\x1b[0;33m"
-#define COLOUR_BLUE    "\x1b[0;34m"
-#define COLOUR_MAGENTA "\x1b[0;35m"
-#define COLOUR_CYAN    "\x1b[0;36m"
-#define COLOUR_RESET   "\x1b[0m"
 
 /* Special ASCII characters */
 #define CHAR_NULL     '\0'
@@ -77,47 +60,6 @@ void *my_malloc_start(void);
 t_memchunk *my_malloc_findchunk(const size_t size, t_memchunk **heap_ptr);
 void my_malloc_mergechunk(t_memchunk *chunk);
 void my_malloc_splitnextchunk(t_memchunk *chunk, const size_t size);
-
-/* Character checking functions */
-int my_isdigit(const int c);
-int my_islower(const int c);
-int my_isupper(const int c);
-int my_isspace(const int c);
-
-/* Character transformation functions */
-char my_tolower(const char c);
-char my_toupper(const char c);
-
-/* File descriptor manipulation */
-int my_openfd(const char *path, const int mode);
-int my_closefd(const int fd);
-
-/* Input/Output (stdout) */
-ssize_t my_putc(const char c);
-ssize_t my_puts(const char *str);
-void my_putn(const int n);
-char my_getc(void);
-ssize_t my_gets(char *str);
-
-/* Input/Output (stderr) */
-ssize_t my_errc(const char c);
-ssize_t my_errs(const char *str);
-void my_errn(const int n);
-
-/* Input/Output (other file descriptor) */
-ssize_t my_fdputc(const int fd, const char c);
-ssize_t my_fdputs(const int fd, const char *str);
-void my_fdputn(const int fd, const int n);
-char my_fdgetc(const int fd);
-ssize_t my_fdgets(const int fd, char *str);
-
-/* String manipulation functions */
-void *my_memchr(const void *str, const unsigned char c, const size_t n);
-ssize_t my_strlen(const char *str);
-int my_strcmp(const char *s1, const char *s2);
-char *my_strcpy(char *dst, const char *src);
-char *my_strncpy(char *dst, const char *src, size_t num);
-char *my_strcat(char *dest, const char *src);
 
 /* Misc functions */
 int my_atoi(const char *str);

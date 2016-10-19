@@ -1,5 +1,5 @@
 /*
- * my_puts.c
+ * my_fdputs.c
  *
  * Licensed under GNU GPL v3
  * Contributors:
@@ -7,22 +7,18 @@
  *
  */
 
-/*
- * This function prints a null-terminated ASCII-encoded string of characters to the standard output
- *
- */
-
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <sys/types.h>
 
-ssize_t my_puts(const char *str)
+ssize_t my_fdputs(const int fd, const char *str)
 {
   ssize_t count;
 
   count = 0;
-  while (str[count] != CHAR_NULL)
+  while (*(str + count) != CHAR_NULL)
   {
-    if (my_putc(str[count]) == FAILURE)
+    if (my_fdputc(fd, *str + count) == FAILURE)
       return (FAILURE);
     ++count;
   }

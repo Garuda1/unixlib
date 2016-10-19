@@ -8,10 +8,11 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <unistd.h>
 
 /*
- * Returns sizeof(char) bytes read 
+ * Returns sizeof(char) bytes read
  * from a provided file descriptor,
  * or FAILURE on error.
  *

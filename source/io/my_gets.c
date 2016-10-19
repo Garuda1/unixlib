@@ -1,5 +1,5 @@
 /*
- * my_fdgets.c
+ * my_gets.c
  *
  * Licensed under GNU GPL v3
  * Contributors:
@@ -8,25 +8,26 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <unistd.h>
 #include <sys/types.h>
 
 /*
  * This function reads sizeof(str) bytes
- * from the a file descriptor, null terminates
+ * from the standard input, null terminates
  * the sequence, and returns the number of
  * bytes read.
  *
  */
 
-ssize_t my_fdgets(const int fd, char *str)
+ssize_t my_gets(char *str)
 {
   ssize_t count;
 
   count = 0;
   while (count < (ssize_t)sizeof(str) - 1)
   {
-    if ((str[count] = my_fdgetc(fd)) == FAILURE)
+    if ((str[count] = my_getc()) == FAILURE)
       return (FAILURE);
     ++count;
   }

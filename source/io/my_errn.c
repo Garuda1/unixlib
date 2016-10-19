@@ -1,5 +1,5 @@
 /*
- * my_putn.c
+ * my_errn.c
  *
  * Licensed under GNU GPL v3
  * Contributors:
@@ -8,15 +8,16 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <sys/types.h>
 
 /*
  * This function prints nb
- * as ASCII to stdout
+ * as ASCII to stderr
  *
  */
 
-void my_putn(const int n)
+void my_errn(const int n)
 {
   int nb;
   int mod;
@@ -24,18 +25,18 @@ void my_putn(const int n)
   nb = n;
   mod = 0;
   if (nb < 10 && nb > -1)
-    my_putc(nb + 48);
+    my_errc(nb + 48);
   if (nb < 0)
   {
-    my_putc('-');
+    my_errc('-');
     nb *= -1;
     if (nb < 10 && nb > -1)
-      my_putn(nb);
+      my_errn(nb);
   }
   if (nb > 9)
   {
     mod = nb % 10;
-    my_putn(nb / 10);
-    my_putc(mod + 48);
+    my_errn(nb / 10);
+    my_errc(mod + 48);
   }
 }
