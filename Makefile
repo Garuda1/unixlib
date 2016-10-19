@@ -70,12 +70,14 @@ CFLAGS += -Wall \
 	  -Werror \
 	  -std=gnu89 \
 	  -I$(HEADERS_DIR) \
-		-g \
-		-c \
-		-fpic
+	  -c \
+	  -fpic
 
 all : $(OBJS)
-	  $(CC) -shared -o lib$(NAME).so $(OBJS)
+	  $(CC) -shared -o lib$(NAME).so $(OBJS) -s
+
+debug : $(OBJS)
+	  $(CC) -shared -o lib$(NAME).so $(OBJS) -g
 
 clean :
 	  $(RM) $(OBJS)
