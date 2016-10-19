@@ -22,6 +22,8 @@ To compile the lib, input:
 
     $ make
 
+(Note: when compiling, a dynamic library with stripped out labels is produced. If you wish to keep the labels and add support for debugging meta information, please compile with `make debug`)
+
 To remove the object files only:
 
     $ make clean
@@ -37,10 +39,6 @@ To recompile everything:
 To install the library:
 
     # make install
-
-To `curl` the answer to life, the universe, and everything:
-
-    $ make shrimps
 
 # Documentation
 
