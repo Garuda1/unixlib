@@ -9,7 +9,7 @@
 # Be careful with that one
 RM = rm -f
 
-# The directory which contains the source files
+PREFIX = /usr/
 SRC_DIR = ./source
 HEADERS_DIR = ./headers
 
