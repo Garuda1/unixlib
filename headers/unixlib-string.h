@@ -27,6 +27,7 @@ void *my_memchr(const void *str, const unsigned char c, const size_t n);
 ssize_t my_strlen(const char *str);
 int my_strcmp(const char *s1, const char *s2);
 char *my_strcpy(char *dst, const char *src);
+size_t my_strlcpy(char *dst, const char *src, size_t num);
 char *my_strncpy(char *dst, const char *src, size_t num);
 char *my_strcat(char *dest, const char *src);
 

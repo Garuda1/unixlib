@@ -9,7 +9,7 @@
 - Every source file must respect the following format:
 
     [File header]
-    [#incude,#define,etc.]
+    [#include,#define,etc.]
     [Documentation as multi-line comment]
     [actual code]
 
@@ -27,7 +27,7 @@
 - Forget about coding style, it's Hacktoberfest after all, it's a community project and diversity is welcome.
 - Don't forget however to edit the makefile and headers to add your source files!
 - Keep in mind that the lib is meant to be used on UNIX systems, mainly Linux x86_64. Do not insert inline assembly or other platform-specific code that doesn't match this criteria.
-- Keep it simple. Do not add extravagent systems, or over-verbosed algorithms.
+- Keep it simple. Do not add extravagant systems, or over-verbosed algorithms.
 - Intense code commenting is recomended, especially in complex parts.
 - No, putting an hexdumped jpeg of your cat as a comment is not acceptable.
 - Don't use binary / octal / etc. You can only use the decimal and hexadecimal bases, unless it actually makes understanding easier.
