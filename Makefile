@@ -32,6 +32,7 @@ SRCS = $(SRC_DIR)/my_atoi.c \
 			 $(SRC_DIR)/string/my_strcat.c \
 			 $(SRC_DIR)/string/my_strcmp.c \
 			 $(SRC_DIR)/string/my_strcpy.c \
+			 $(SRC_DIR)/string/my_strlcpy.c \
 			 $(SRC_DIR)/string/my_strlen.c \
 			 $(SRC_DIR)/string/my_strncpy.c \
 			 $(SRC_DIR)/string/my_tolower.c \
@@ -71,7 +72,8 @@ CFLAGS += -Wall \
 	  -std=gnu89 \
 	  -I$(HEADERS_DIR) \
 	  -c \
-	  -fpic
+	  -fpic \
+		-nostdlib
 
 all : $(OBJS)
 	  $(CC) -shared -o lib$(NAME).so $(OBJS) -s
