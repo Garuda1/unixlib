@@ -63,6 +63,7 @@ void my_malloc_splitnextchunk(t_memchunk *chunk, const size_t size);
 
 /* Misc functions */
 int my_atoi(const char *str);
+int my_rand(void);
 void *my_memcpy(void *dest, const void *src, const size_t count);
 void *my_memset(void *ptr, int value, size_t num);
 void my_exit(const char status);
