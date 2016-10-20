@@ -10,6 +10,8 @@
 #ifndef _UNIXLIB_IO_H
 #define _UNIXLIB_IO_H
 
+#include <sys/types.h>
+
 /* Terminal colour */
 #define COLOUR_RED     "\x1b[0;31m"
 #define COLOUR_GREEN   "\x1b[0;32m"

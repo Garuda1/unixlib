@@ -10,6 +10,8 @@
 #ifndef _UNIXLIB_STRING_H
 #define _UNIXLIB_STRING_H
 
+#include <sys/types.h>
+
 /* Character checking functions */
 int my_isdigit(const int c);
 int my_islower(const int c);
