@@ -6,7 +6,7 @@
 ## - Garuda1 <garuda1@protonmail.com>
 ##
 
-.PHONY : all clean fclean re install
+.PHONY : all clean fclean re install uninstall reinstall
 
 PREFIX := /usr/
 SRC_DIR := ./source
@@ -41,3 +41,9 @@ install:
 	cp lib$(NAME).so $(PREFIX)/lib/
 	cp $(HDRS) $(PREFIX)/local/include
 	ldconfig
+
+uninstall:
+	-@$(RM) $(PREFIX)/lib/lib$(NAME).so
+	-@$(RM) $(PREFIX)/local/include/$(NAME)*.h
+
+reinstall: uninstall install

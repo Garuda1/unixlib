@@ -8,7 +8,7 @@
 
 C standard library replacement for UNIX systems created for Hacktoberfest 2016.
 
-This library consists of replacements for simple C standard functions, important data structures, and everyday algorithms. It mainly focuses on getting rid of the error-checking/cross platform features to reduce the functions to small pieces of understandable code which easily fit in one source file.
+This library consists of replacements for simple C standard functions, important data structures, and everyday algorithms. It mainly focuses on getting rid of the error-checking/cross platform features to reduce the functions to small pieces of understandable code which easily fit in one source file. Consider it a syscall abstraction layer that can replace the libc.
 
 The mindset in this project is to get rid of abstraction, focusing on what something is intended to do. As such, any form of object-oriented programming is prohibited. Keep it simple.
 
@@ -18,30 +18,29 @@ For a complete and a detailed documentation, please refer to the [wiki](https://
 
 Compilation is achieved through the use of GNU Make. A makefile is provided in the root directory.
 
-To compile the lib, input:
+To compile the library and install it, please input the following commands:
 
+    $ git clone https://github.com/Garuda1/unixlib
+    $ cd unixlib
     $ make
-
-(Note: when compiling, a dynamic library with stripped out labels is produced. If you wish to keep the labels and add support for debugging meta information, please compile with `make debug`)
-
-To remove the object files only:
-
-    $ make clean
-
-To remove the object and lib files:
-
-    $ make fclean
-
-To recompile everything:
-
-    $ make re
-
-To install the library:
-
     # make install
 
-# Documentation
+# Usage and documentation
 
-To use the library, include `<unixlib.h>` in your file, and use the `-lunixlib` flag.
+To use the library, include the required header in your file, and use the `-lunixlib` flag. For a list of the available headers, just browse the `include` folder.
 
-Every function, structure, or global variable from the library is defined in `unixlib.h`. Documentation regarding a specific feature can be found in the corresponding source file.
+Every function, structure, or global variable from the library is defined in its respective header. Documentation regarding a specific feature can be found in the corresponding source file, as well as the [wiki](https://github.com/Garuda1/unixlib/wiki).
+
+# Contributing
+
+If you want to contribute, then you might want to read the following:
+
+You can compile a GDB-readable binary file, using the `debug` Make target.
+
+    $ make debug
+
+Doing so will not strip out the labels, and will compile using the `-g` flag.
+
+You can also reinstall the library, using the `reinstall` Make target:
+
+    # make reinstall
