@@ -12,9 +12,10 @@
  *
  */
 
-#include  <unistd.h>
-#include  <unixlib.h>
-#include  <sys/types.h>
+#include <unistd.h>
+#include <unixlib.h>
+#include <unixlib-io.h>
+#include <sys/types.h>
 
 ssize_t my_errc(const char c)
 {

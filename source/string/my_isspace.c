@@ -17,6 +17,7 @@
  */
 
 #include  <unixlib.h>
+#include  <unixlib-string.h>
 
 int my_isspace(const int c)
 {

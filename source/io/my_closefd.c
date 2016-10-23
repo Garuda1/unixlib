@@ -8,6 +8,7 @@
  */
 
 #include <unistd.h>
+#include <unixlib-io.h>
 #include <unixlib.h>
 
 /*

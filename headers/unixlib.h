@@ -85,7 +85,7 @@ struct s_list
     t_node *end;
 };
 
-t_list *my_list_init();
+t_list *my_list_init(void);
 void my_list_free(t_list *l);
 t_node *my_list_append(t_list *l, void *value);
 

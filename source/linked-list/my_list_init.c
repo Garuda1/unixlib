@@ -13,7 +13,7 @@
  *
  */
 
-t_list *my_list_init()
+t_list *my_list_init(void)
 {
-    return (t_list *) my_calloc(1, sizeof(t_list));
+    return ((t_list *) my_calloc(1, sizeof(t_list)));
 }

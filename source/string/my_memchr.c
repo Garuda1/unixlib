@@ -8,6 +8,7 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-string.h>
 #include <sys/types.h>
 
 /*
@@ -20,12 +21,12 @@
 void *my_memchr(const void *str, const unsigned char c, const size_t n)
 {
   size_t count;
-  
+
   count = 0;
   while (count < n)
   {
     if (*((unsigned char *)str) == c)
-      return ((void *)((unsigned char *)str) + count);
+      return ((void *)(((unsigned char *)str) + count));
     ++count;
   }
   return (MY_NULL);

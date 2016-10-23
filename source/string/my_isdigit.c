@@ -13,7 +13,8 @@
  *
  */
 
-#include  <unixlib.h>
+#include <unixlib.h>
+#include <unixlib-string.h>
 
 int my_isdigit(const int c)
 {

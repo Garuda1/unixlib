@@ -8,13 +8,14 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-string.h>
 
 /*
  * Copies the C string pointed by source into the array pointed by destination,
  * including the terminating null character (and stopping at that point).
  * To avoid overflows, the size of the array pointed by destination shall be long
- * enough to contain the same C string as source 
- * (including the terminating null character), and should not overlap in 
+ * enough to contain the same C string as source
+ * (including the terminating null character), and should not overlap in
  * memory with source.
  *
  */

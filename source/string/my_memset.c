@@ -18,11 +18,11 @@
 void *my_memset(void *ptr, int value, size_t num)
 {
   void *ptr_block = ptr;
-  size_t ptr_num = 0;      // number of bytes written to 'ptr'
+  size_t ptr_num = 0;      /* number of bytes written to 'ptr' */
 
   while (ptr_num < num)
   {
-    *(unsigned char *)ptr++ = (unsigned char)value;
+    *(((unsigned char *)ptr) + ptr_num) = (unsigned char)value;
     ptr_num++;
   }
 

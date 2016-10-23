@@ -13,8 +13,9 @@
  *
  */
 
-#include  <unixlib.h>
-#include  <sys/types.h>
+#include <unixlib.h>
+#include <unixlib-string.h>
+#include <sys/types.h>
 
 ssize_t my_strlen(const char *str)
 {

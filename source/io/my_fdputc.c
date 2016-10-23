@@ -8,6 +8,7 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-io.h>
 #include <unistd.h>
 #include <sys/types.h>
 

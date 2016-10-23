@@ -8,6 +8,7 @@
  */
 
 #include <unixlib.h>
+#include <unixlib-string.h>
 
 /*
  * This function returns SUCCESS if

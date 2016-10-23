@@ -15,7 +15,7 @@
  */
 
 size_t
-strlcpy(char *dst, const char *src, size_t num)
+my_strlcpy(char *dst, const char *src, size_t num)
 {
         const char *s = src;
         size_t n = num;
