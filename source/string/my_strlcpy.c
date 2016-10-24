@@ -17,19 +17,20 @@
 size_t
 my_strlcpy(char *dst, const char *src, size_t num)
 {
+	char *d = dst;
         const char *s = src;
         size_t n = num;
 
         if (n != 0) {
                 while (--n != 0) {
-                        if ((*dst++ = *s++) == CHAR_NULL)
+                        if ((*d++ = *s++) == CHAR_NULL)
                                 break;
                 }
         }
 
         if (n == 0) {
                 if (num != 0)
-                        *dst = CHAR_NULL;
+                        *d = CHAR_NULL;
                 while (*s++)
                         ;
         }
