@@ -38,6 +38,7 @@ ssize_t my_fdputc(const int fd, const char c);
 ssize_t my_fdputs(const int fd, const char *str);
 void my_fdputn(const int fd, const int n);
 char my_fdgetc(const int fd);
+int my_fdgetn(const int fd);
 ssize_t my_fdgets(const int fd, char *str);
 
 /* Input/Output (stdout) */
@@ -45,6 +46,7 @@ ssize_t my_putc(const char c);
 ssize_t my_puts(const char *str);
 void my_putn(const int n);
 char my_getc(void);
+int my_getn(void);
 ssize_t my_gets(char *str);
 
 /* Input/Output (stderr) */
