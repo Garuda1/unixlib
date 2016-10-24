@@ -9,6 +9,7 @@
 
 #include <unixlib.h>
 #include <unixlib-io.h>
+#include <unixlib-string.h>
 #include <unistd.h>
 #include <sys/types.h>
 
@@ -29,6 +30,8 @@ ssize_t my_gets(char *str)
   {
     if ((str[count] = my_getc()) == FAILURE)
       return (FAILURE);
+    if (my_isspace(str[count]) == TRUE || str[count] == CHAR_NEWLINE)
+      return (SUCCESS);
     ++count;
   }
   str[count + 1] = CHAR_NULL;
