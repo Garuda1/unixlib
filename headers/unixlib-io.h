@@ -40,6 +40,7 @@ void my_fdputn(const int fd, const int n);
 char my_fdgetc(const int fd);
 int my_fdgetn(const int fd);
 ssize_t my_fdgets(const int fd, char *str);
+ssize_t my_fdlputs(const int fd, const size_t nb, ...);
 
 /* Input/Output (stdout) */
 ssize_t my_putc(const char c);
@@ -48,10 +49,12 @@ void my_putn(const int n);
 char my_getc(void);
 int my_getn(void);
 ssize_t my_gets(char *str);
+ssize_t my_lputs(const size_t nb, ...);
 
 /* Input/Output (stderr) */
 ssize_t my_errc(const char c);
 ssize_t my_errs(const char *str);
 void my_errn(const int n);
+ssize_t my_lerrs(const size_t nb, ...);
 
 #endif /* #ifndef _UNIXLIB_IO_H */
