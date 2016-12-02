@@ -30,9 +30,9 @@ ssize_t my_gets(char *str)
   {
     if ((str[count] = my_getc()) == FAILURE)
       return (FAILURE);
+    ++count;
     if (my_isspace(str[count]) == TRUE || str[count] == CHAR_NEWLINE)
       return (SUCCESS);
-    ++count;
   }
   str[count + 1] = CHAR_NULL;
   return (count);
