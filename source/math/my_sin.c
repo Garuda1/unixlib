@@ -7,7 +7,7 @@
  *
  */
 
-#include "mymaths.h"
+#include <unixlib-math.h>
 
 long double my_sin(long double x)
 {

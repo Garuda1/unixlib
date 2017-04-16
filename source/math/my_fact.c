@@ -7,7 +7,7 @@
  *
  */
 
-#include "mymaths.h"
+#include <unixlib-math.h>
 #include <stdint.h>
 
 uint32_t my_fact(const uint8_t x)

@@ -7,7 +7,7 @@
  *
  */
 
-#include "mymaths.h"
+#include <unixlib-math.h>
 
 long double my_fmod(const long double a, const long double b)
 {

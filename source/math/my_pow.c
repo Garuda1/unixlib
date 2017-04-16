@@ -7,7 +7,7 @@
  *
  */
 
-#include "mymaths.h"
+#include <unixlib-math.h>
 #include <stdint.h>
 
 long double my_pow(const long double base, const int32_t exp)
