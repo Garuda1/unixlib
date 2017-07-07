@@ -9,7 +9,33 @@
 
 #include <unixlib-math.h>
 
-long double my_exp(const long double x)
+/*
+ * exp(2*k*x) = pow(exp(x), 2*k)
+ *
+ * This algorithm divides x by 2 (k times) until it is inferior to 1,
+ * then computes exp(x) using a Taylor series, and squares the result
+ * (k times) before returning it.
+ *
+ */
+
+long double my_exp(long double x)
 {
-    return (1.0 + x + (my_pow(x, 2)/2) + (my_pow(x, 3) / 6) + (my_pow(x, 4) / 24) + (my_pow(x, 5) / 120) + (my_pow(x, 6) / 720));
+  long double res;
+  long double xpow;
+  uint16_t k;
+
+  if (x<0.0)
+    return (1.0/my_exp(-x));
+  res = 0.0;
+  xpow = 1.0;
+  for (k=0; x>1.0; ++k)
+    x/=2;
+  for (uint8_t i=0; i<12; ++i)
+  {
+    xpow*=x;
+    res+=xpow/my_fact[i];
+  }
+  for (uint8_t i=0; i<k; ++i)
+    res*=res;
+  return (res);
 }

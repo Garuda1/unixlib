@@ -21,7 +21,7 @@ NAME := unixlib
 # GCC warnings
 WARNINGS := -Wall -Werror -Wextra -pedantic -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -Winline -Wno-long-long -Wuninitialized -Wstrict-prototypes
 
-CFLAGS += -std=gnu89 -I$(HDR_DIR) -c -fpic -nostdlib $(WARNINGS)
+CFLAGS += -std=c11 -I$(HDR_DIR) -c -fpic -nostdlib $(WARNINGS)
 
 all: $(OBJS)
 	  cc -shared -o lib$(NAME).so $(OBJS) -s
