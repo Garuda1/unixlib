@@ -32,8 +32,8 @@ long double my_exp(long double x)
     x/=2;
   for (uint8_t i=0; i<12; ++i)
   {
-    xpow*=x;
     res+=xpow/my_fact[i];
+    xpow*=x;
   }
   for (uint8_t i=0; i<k; ++i)
     res*=res;
