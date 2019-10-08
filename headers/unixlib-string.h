@@ -25,6 +25,7 @@ char my_toupper(const char c);
 /* String manipulation functions */
 void *my_memchr(const void *str, const unsigned char c, const size_t n);
 ssize_t my_strlen(const char *str);
+char *my_strrev(char *str);
 int my_strcmp(const char *s1, const char *s2);
 char *my_strcpy(char *dst, const char *src);
 size_t my_strlcpy(char *dst, const char *src, size_t num);
