@@ -43,6 +43,7 @@
 void my_free(const void *ptr);
 void *my_malloc(const size_t size);
 void *my_calloc(const size_t nmemb, const size_t size);
+void *my_realloc(void *ptr, size_t size);
 
 /* Memory allocation (do not use) */
 typedef struct s_memchunk t_memchunk;
@@ -63,6 +64,9 @@ void my_malloc_splitnextchunk(t_memchunk *chunk, const size_t size);
 
 /* Misc functions */
 int my_atoi(const char *str);
+char *my_itoa(const int nb, char *str);
+char *my_itoa_bin(const int nb, char *str);
+char *my_itoa_hex(const int nb, char *str);
 int my_rand(void);
 void *my_memcpy(void *dest, const void *src, const size_t count);
 void *my_memset(void *ptr, int value, size_t num);
