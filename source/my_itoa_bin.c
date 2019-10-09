@@ -40,5 +40,5 @@ char *my_itoa_bin(const int nb, char *str)
         str[i++] = '-';
     str[i] = CHAR_NULL;
 
-    return strrev(str);
+    return my_strrev(str);
 }
