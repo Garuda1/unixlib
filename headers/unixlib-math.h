@@ -53,4 +53,8 @@ long double my_log(long double x);
 long double my_log2(const long double x);
 long double my_log10(const long double x);
 
+long double fabs(double x);
+int abs(int x);
+
+
 #endif
